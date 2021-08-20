@@ -9,8 +9,8 @@ class TaskViewModel(private val repository: TaskRepository) : ViewModel() {
 
     val allTask: LiveData<MutableList<Task>> = repository.allTask.asLiveData()
 
-    fun insert(task: Task) = viewModelScope.launch {
-        repository.insert(task)
+    fun insert(task: String) = viewModelScope.launch {
+        repository.insert(task = Task(task = task))
     }
 
     class TaskViewModelFactory(private val repository: TaskRepository) : ViewModelProvider.Factory {
