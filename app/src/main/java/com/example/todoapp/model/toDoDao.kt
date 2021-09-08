@@ -19,7 +19,11 @@ interface ToDoDao {
     @Delete//("DELETE FROM to_do_tasks WHERE id = :taskId ")
     suspend fun delete(task: Task)
 
-    @Update
-    suspend fun update(task: Task)
+    /*@Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun update(task: Task)*/
+
+    @Query("UPDATE to_do_tasks SET task = :task1 WHERE id = :tid")
+    suspend fun updateTask(tid: Int, task1: String?)
+
 
 }

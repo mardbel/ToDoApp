@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.ToDoApplication
 import com.example.todoapp.databinding.ActivityMainBinding
+import com.example.todoapp.model.Task
 import com.example.todoapp.viewModel.TaskViewModel
 import com.example.todoapp.viewModel.TaskViewModel.TaskViewModelFactory
 
@@ -55,10 +56,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskClickListener {
         }
     }
 
-    override fun onTaskClick(task: String?) {
-        //Toast.makeText(this, "$task", Toast.LENGTH_LONG).show()
-        var dialog = EditDialogFragment()
-        dialog.show(supportFragmentManager,"customDialog")
+    override fun onTaskClick(task: Task) {
+        var dialog = EditDialogFragment(task)
+        dialog.show(supportFragmentManager, "customDialog")
+        getTaskDataBase()
 
     }
 }

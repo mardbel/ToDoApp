@@ -15,7 +15,7 @@ class TaskAdapter(private val itemClickListener: OnTaskClickListener) :
     ListAdapter<Task, TaskAdapter.ViewHolder>(TaskDiffCallback) {
 
     interface OnTaskClickListener {
-        fun onTaskClick(task: String?)
+        fun onTaskClick(task: Task)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,7 +41,7 @@ class TaskAdapter(private val itemClickListener: OnTaskClickListener) :
 
         fun bind(item: Task, position: Int) {
             itemView.setOnClickListener() {
-                itemClickListener.onTaskClick(item.task)
+                itemClickListener.onTaskClick(item)
             }
         }
 
