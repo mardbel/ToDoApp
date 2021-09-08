@@ -11,7 +11,11 @@ class TaskRepository(private val toDoDao: ToDoDao) {
         toDoDao.insert(task)
     }
 
-    suspend fun deleteById(taskId: Int){
-        toDoDao.deleteById(taskId)
+    suspend fun delete(task: Task){
+        toDoDao.delete(task)
+    }
+
+    suspend fun update(task: Task){
+        toDoDao.update(task)
     }
 }

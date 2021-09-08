@@ -1,9 +1,6 @@
 package com.example.todoapp.model
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
 
@@ -19,8 +16,10 @@ interface ToDoDao {
     @Query("DELETE FROM to_do_tasks")
     suspend fun deleteAll()
 
-    @Query("DELETE FROM to_do_tasks WHERE id = :taskId ")
-    suspend fun deleteById(taskId: Int)
+    @Delete//("DELETE FROM to_do_tasks WHERE id = :taskId ")
+    suspend fun delete(task: Task)
 
+    @Update
+    suspend fun update(task: Task)
 
 }
