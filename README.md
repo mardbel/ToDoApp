@@ -1,2 +1,2 @@
 # TODOAPP
-Android demo App con clean architecture y corrutines.
+Android demo App con clean architecture and corrutines.
