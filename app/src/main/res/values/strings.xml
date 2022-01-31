@@ -2,4 +2,8 @@
     <string name="app_name">ToDoApp</string>
 
     <string name="task">Task</string>
+    <string name="settings">settings</string>
+    <string name="about">about</string>
+    <string name="content_description_about">description_about</string>
+    <string name="content_description_settings">description_settings</string>
 </resources>

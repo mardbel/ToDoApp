@@ -10,7 +10,7 @@ import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 abstract class SwipeToDeleteCallback(context: Context): ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
 
-    private val backgroundColor = ContextCompat.getColor(context, R.color.color_recycler_view)
+    private val backgroundColor = ContextCompat.getColor(context, R.color.white)
     override fun onMove(
         recyclerView: RecyclerView,
         viewHolder: RecyclerView.ViewHolder,
