@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val recyclerView = binding.TaskRecyclerView
+        val recyclerView = binding.taskRecyclerView
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))

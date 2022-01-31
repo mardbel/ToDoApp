@@ -6,4 +6,5 @@
     <string name="about">about</string>
     <string name="content_description_about">description_about</string>
     <string name="content_description_settings">description_settings</string>
+    <string name="today">Today</string>
 </resources>
