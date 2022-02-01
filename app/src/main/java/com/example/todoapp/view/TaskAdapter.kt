@@ -3,6 +3,7 @@ package com.example.todoapp.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -26,8 +27,8 @@ class TaskAdapter(private val itemClickListener: OnTaskClickListener) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentTask: Task = getItem(position)
-        val numberDisplayed = position + 1
-        holder.taskId.text = numberDisplayed.toString()
+        //val numberDisplayed = position + 1
+        //holder.taskId.text = numberDisplayed.toString()
         holder.taskItem.text = currentTask.task
         holder.bind(currentTask, position)
     }
@@ -36,7 +37,7 @@ class TaskAdapter(private val itemClickListener: OnTaskClickListener) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var binding = HolderLayoutBinding.bind(itemView)
-        var taskId: TextView = binding.taskItemId
+        var taskId: ImageView = binding.bulletId
         var taskItem: TextView = binding.taskItemTv
 
         fun bind(item: Task, position: Int) {

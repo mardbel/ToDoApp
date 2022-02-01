@@ -7,17 +7,13 @@ import android.content.Context
 import androidx.core.content.ContextCompat
 import com.example.todoapp.R
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
+import java.util.*
 
-abstract class SwipeToDeleteCallback(context: Context): ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+abstract class SwipeToDeleteCallback(context: Context): ItemTouchHelper.SimpleCallback(
+    ItemTouchHelper.UP or ItemTouchHelper.DOWN, ItemTouchHelper.LEFT) {
 
     private val backgroundColor = ContextCompat.getColor(context, R.color.white)
-    override fun onMove(
-        recyclerView: RecyclerView,
-        viewHolder: RecyclerView.ViewHolder,
-        target: RecyclerView.ViewHolder
-    ): Boolean {
-        return false
-    }
+
 
     override fun onChildDraw(
         c: Canvas,

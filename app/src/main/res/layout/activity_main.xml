@@ -42,7 +42,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="65dp">
 
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_recycler"
                     android:layout_width="match_parent"
@@ -56,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="55dp"
+                        android:layout_marginTop="65dp"
                         android:text="@string/today"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -73,83 +72,7 @@
                         android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_today" />
-
-                    <TextView
-                        android:id="@+id/tv_tomorrow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Tomorrow"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/teal_200"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/task_recycler_view" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/task_tomorrow_recycler_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_tomorrow" />
-
-                    <TextView
-                        android:id="@+id/tv_upcoming"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Upcoming"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/teal_200"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/task_tomorrow_recycler_view" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/task_upcoming_recycler_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_upcoming" />
-
-                    <TextView
-                        android:id="@+id/tv_someday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Someday"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/teal_200"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/task_upcoming_recycler_view" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/task_someday_recycler_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_someday" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_today"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -172,6 +95,7 @@
                 android:id="@+id/editText"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginBottom="20dp"
                 android:hint="   I want to..."
